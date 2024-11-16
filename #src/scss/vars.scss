@@ -1,0 +1,24 @@
+:root{
+	//Container Width
+	--min-width: 320px;
+	--max-width: 1920px;
+	--max-width-container: 1200px;
+
+	// Fonts
+	--primary-font-family: 'Roboto', sans-serif;
+
+	// Colors
+	--text-color: #282828;
+	--accent-color: #6A63EB;
+	--accent-color-yellow: #f4bc50;
+	--header-height: 80px;
+
+	// Header Height
+	--header-height: 80px;
+}
+
+// Media Breakpoints
+$laptop: calc(1200px + 12px);
+$tablet: 992px;
+$tablet-small: 768px;
+$phone: 500px;

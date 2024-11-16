@@ -1,0 +1,86 @@
+.video {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	svg{
+	 transition: .3s ease;
+	}
+	&:hover{
+	 .video__link{
+		&::after{
+		 opacity: 0;
+		}
+	 }
+	 #play{
+		fill: $accent;
+	 }
+	 svg{
+		transform: scale(1.2);
+	 }
+	}
+	&:hover .video__button-shape,  .video__button:focus .video__button-shape {
+		fill: $accent;
+		fill-opacity: 1;
+	}
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&::after{
+			content:'';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($accent, 0.2);
+			border-radius: 20px;
+			backdrop-filter: blur(2px);
+			transition: .3s ease;
+		}
+	}
+	&__media {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+		border-radius: 20px;
+	}
+	&__button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		display: none;
+		padding: 0;
+		width: 85px;
+		border: none;
+		background-color: transparent;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+		display: block;
+		&:focus {
+			outline: none;
+		}
+		&-shape {
+			fill: #212121;
+			fill-opacity: 0.8;
+		}
+		&-icon {
+			fill: #ffffff;
+		}
+	}
+	#play{
+		fill: $accent;
+	}
+	&--enabled {
+		cursor: pointer;
+	}
+	&--enabled .video__button {
+		display: block;
+	}
+}
